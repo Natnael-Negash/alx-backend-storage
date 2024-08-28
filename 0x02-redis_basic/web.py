@@ -21,7 +21,6 @@ from typing import Callable
 from functools import wraps
 
 redis = redis.Redis()
-redis_client = redis.Redis(host='localhost', port=6379, db=0)
 
 def wrap_requests(fn: Callable) -> Callable:
     """
